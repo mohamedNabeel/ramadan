@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css.css" rel="stylesheet">
+    <title>رمضان كريم</title>
+</head>
+<body>
+
+ 
+  <header>
+    <img class="hal" src="giphy.gif"  width="100px"/>
+    <img class="hal2" src="giphy.gif"  width="300px"/>
+
+  </header>
+  <div class="content">
+    <h2>يهنئكم حمد بحلول شهر رمضان أسأل الله في هذا الشهر المبارك أن ُينعم عليك دائماً بالصحة والخير والبركة</h2>
+    <h3>مشاركه تهنئه عبر :</h3>
+
+    <div>
+       <button class="w" onclick="sendWhatsAppMessage()">
+        <img  src="whatsapp.png" width="20px">
+        واتساب</button>
+        
+      <button class="mas" onclick="sendWhatsAppMessage()">
+        <img src="messenger.png" width="20px">
+        ماسجنر</button>
+    </div>
+    <button class="links">
+    اعمل تهنئه خاصة بك
+  </button>
+  <img class="mh" src="foot.png">
+
+  </div>
+
+ 
+  
+
+   
+
+   
+    <script>
+    const headline = document.getElementById('headline');
+
+const text = headline.textContent;
+
+headline.textContent = '';
+
+for (let i = 0; i < text.length; i++) {
+  setTimeout(() => {
+    headline.textContent += text[i];
+  }, i *90);
+}
+setInterval(function() {
+  headline.style.textShadow = (headline.style.textShadow === '0 0 10px #c8a807' ? '' : '0 0 10px #c8a807');
+}, 100);
+
+function sendWhatsAppMessage() {
+  // Get the user's phone number from an input field or some other source
+  
+  // Construct the WhatsApp URL with the user's phone number
+  var whatsAppUrl = "https://wa.me/";
+  
+  // Open the WhatsApp URL in a new tab or window
+  window.open(whatsAppUrl);
+}
+    </script>
+</body>
+
+
+</html>
